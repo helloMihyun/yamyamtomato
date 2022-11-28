@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>접근성 SELECT</title>
+</head>
+<style>
+  @font-face {
+  font-family: 'NanumSquare';
+  src: url(/resources/font/NanumSquareR.eot);
+  src: url(/resources/font/NanumSquareR.eot?#iefix) format('embedded-opentype'),
+        url(/resources/font/NanumSquareR.woff) format('woff'),
+        url(/resources/font/NanumSquareR.ttf) format('truetype');
+  }
+  @font-face {
+  font-family: 'NanumGothic';
+  src: url(/resources/font/NanumGothic.eot);
+  src: url(/resources/font/NanumGothic.eot?#iefix) format('embedded-opentype'),
+        url(/resources/font/NanumGothic.woff) format('woff'),
+        url(/resources/font/NanumGothic.ttf) format('truetype');
+  }
+
+
+  
+  html,bodys{width:100%;height:100%;}
+  body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select {margin:0; padding:0;}
+  body,input,textarea,select,button,table {font-family:'NanumGothic',NanumGothic,'나눔고딕',Malgun Gothic,'돋움',Dotum,helvetica,arial,sans-serif;font-size:14px;color:#000;}
+  article,aside,dialog,footer,header,section,footer,nav{display:block;margin:0;padding:0;} /* html5 tags */
+  img,fieldset,iframe{border:0 none;}
+  img{vertical-align:top;}
+  input,select,button{vertical-align:middle;}
+  select{-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+  ul,ol{list-style:none;}
+  i,em,address{font-style:normal;}
+  a{color:#000;text-decoration:none;}
+  a:hover,a:active,a:focus{text-decoration:none;}
+  label,button{cursor:pointer;}
+  table{width:100%;border-collapse:collapse;}
+  /* Fire Fox button style bug */
+  button::-moz-focus-inner {padding:0; border:0;}
+
+  /* common */
+  body{min-width:1260px;}
+  h2, h4{font-size:22px;}
+  h3{font-size:30px;font-weight:normal;}
+  h5{font-size:18px;}
+  .blind {position:absolute;overflow:hidden;clip:rect(0 0 0 0);margin:-1px;width:1px;height:1px;}
+  .fl {display:block;float:left;}
+  .fr {display:block;float:right;}
+  .ofh {overflow:hidden;}
+  /*[class^=icon] {background-image:url(/resources/img/nuli_sprite.png);background-repeat:no-repeat;}*/
+  [class^=picto] {background-image:url(/resources/img/icon_list.png);background-repeat:no-repeat;}
+  .btn-common{display:inline-block;padding:12px 40px;font-size:16px;font-weight:bold;border:1px solid #000;background:#fff;}
+  .btn-gray{color:#fff;background:#484848;border:1px solid #484848;}
+  .btn-blue{color:#fff;background:#325ede;border:1px solid #325ede;}
+  .btn-cblue{color:#325ede;border:1px solid #325ede;}
+  .btn-downlaod span{display:inline-block;padding:0 35px 0 0;position:relative;}
+  .btn-downlaod span::after{display:inline-block;content:"";position:absolute;top:2px;right:0;width:12px;height:15px;background:url(/resources/img/nuli_sprite.png) -140px -80px no-repeat;}
+  .link-line{position:relative;color:#0e45ea;}
+  .link-line::after{display:inline-block;content:"";width:100%;height:1px;position:absolute;left:0;bottom:-2px;background:#0e45ea;}
+  .label-common{display:inline-block;font-size:16px;font-weight:bold;vertical-align:middle;}
+  .input-common{padding:0 8px;height:32px;font-size:16px;border:1px solid #e5e5e5;box-sizing:border-box;}
+  .input-common:focus, .input-common:active{border:1px solid #325ede;}
+  .label-chk{display:inline-block;position:relative;padding:8px 30px 8px 20px;font-size:14px;vertical-align:middle;}
+  .label-chk::before{display:inline-block;content:'';position:absolute;top:9px;left:0;width:15px;height:15px;background:url(/resources/img/nuli_sprite.png) 0 -80px no-repeat;}
+  input[type=checkbox]:checked + .label-chk::before{background:url(/resources/img/nuli_sprite.png) -20px -80px no-repeat;}
+  .font-bold {font-weight:bold;}
+
+  .tool .aria_ui{margin-top:15px;position:relative;}
+  .aria_ui .tit{font-size:20px;font-weight:normal;}
+  .aria_ui .btn_select{position:relative;padding:15px 50px 15px 20px;width:180px;font-size:18px;border:1px solid #000;background:#fff;}
+  .aria_ui .icon_arr{display:inline-block;position:absolute;top:23px;right:14px;width:0;height:0;border-style:solid;border-width:8px;border-color:#000 transparent transparent transparent;}
+  .aria_ui .icon_arr.active,
+  .aria_ui .btn_select[aria-expanded='true'] .icon_arr {top:14px;border-color:transparent transparent #000 transparent;}
+
+  .aria_ui .select_wrap{position:relative;margin-top:15px;}
+  .aria_ui .li_sort{/*display:none;*/position:absolute;top:52px;left:0;width:180px;border:1px solid #000;background:#fff;box-sizing:border-box;}
+  .aria_ui .li_sort li{padding:15px 20px 15px 20px;font-size:18px;}
+  .aria_ui .li_sort li:hover,
+  .aria_ui .li_sort li[aria-selected="true"]{color:#fff;font-weight:bold;background:#2c75c7; cursor:default;}
+</style>
+<body>
+  <div class="select_wrap">
+    <button class="btn_select" aria-haspopup="listbox" aria-controls="li_sort" aria-expanded="true"><span>네이버 랭킹순</span><span class="icon_arr" aria-hidden="true"></span></button>
+    <ul id="li_sort" role="listbox" class="li_sort" style="display: block;">
+      <li id="li_sort01" role="option" aria-selected="true" tabindex="-1">네이버 랭킹순</li>
+      <li id="li_sort02" role="option" aria-selected="false" tabindex="-1">낮은 가격순</li>
+      <li id="li_sort03" role="option" aria-selected="false" tabindex="-1">높은 가격순</li>
+      <li id="li_sort04" role="option" aria-selected="false" tabindex="-1">등록일순</li>
+      <li id="li_sort05" role="option" aria-selected="false" tabindex="-1">리뷰 많은순</li>
+    </ul>
+  </div>
+</body>
+</html>
