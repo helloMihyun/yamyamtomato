@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/* @import url(//db.onlinewebfonts.com/c/9d25ea5c587d0f9d470aa9a3634735ea?family=ETmodules); */
+
+body {font-family:Open Sans,Arial,sans-serif;font-family: Open Sans,Arial,sans-serif;
+  font-size: 14px;
+  color: #666;
+  background-color: #fff;
+  line-height: 1.7em;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;}
+.inner_wrap {max-width:1080px;width:100%;height:80px;margin:auto;}
+header {position:fixed;width:100%;border-bottom:1px solid #ddd;}
+header .inner_wrap {display:flex;justify-content:space-between;align-items:center;text-align:left;position:relative;}
+#main-header{line-height:23px;font-weight:500;top:0;background-color:#fff;width:100%;box-shadow:0 1px 0 rgba(0,0,0,.1);-moz-box-shadow:0 1px 0 rgba(0,0,0,.1);-webkit-box-shadow:0 1px 0 rgba(0,0,0,.1);position:relative;z-index:99999}
+/* .logo_container {position:absolute;height:100%;width:100%;} */
+/* header .logo_container {background:#a8181874;} */
+header h1 {flex:1;}
+header h1 img {display:inline-block;max-height:54%;height:43.1875px; -webkit-transition:all .4s ease-in-out;transition:all .4s ease-in-out;margin-bottom:0;float:none;vertical-align:middle;-webkit-transform:translateZ(0);}
+.nav {display:flex;}
+
+header nav li {font-size:14px;}
+header nav li {margin-right:22px;}
+
+.icon {
+  font-family:ETmodules!important;
+  font-style:normal;
+  font-weight:400;
+  -webkit-font-feature-settings:normal;
+  font-feature-settings:normal;
+  font-variant:normal;
+  text-transform:none;
+  line-height:1;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-shadow:0 0;}
+#et_search_icon {position:relative;}
+#et_top_search {width:17px;height:17px;display:inline-block;}
+#et_search_icon:before {
+  content:"\55";
+  font-size:17px;
+  left:0;
+  position:absolute;
+  top:-3px;
+}
+.et_search_outer {position:absolute;width:100%;overflow:hidden;top:0;right:0;display:flex;justify-content:flex-end;}
+et_close_search_field {font-family: ETmodules;
+  content: "\4d";
+  speak: none;
+  font-weight: 400;
+  -webkit-font-feature-settings: normal;
+  font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size: 32px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.contents {height:100vh;}
+
+footer .et_pb_row {display: flex;justify-content:space-between;padding:4% 0;}
+footer .et_pb_column {width:29.6667%;}
+.et_pb_image_1_tb_footer {width:80%;text-align:left;margin-left:0;}
+.et_pb_image .et_pb_image_wrap {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+}
+.et_pb_image_0_tb_footer {width:80%;text-align:left;margin-left:0;}
