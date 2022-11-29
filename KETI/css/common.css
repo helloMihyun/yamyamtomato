@@ -1,0 +1,526 @@
+
+/* ====== font ====== */
+@import url('https://fonts.cdnfonts.com/css/open-sans');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+/*
+* {
+    font-family: 'Open Sans', sans-serif;
+    color: #666;
+    line-height: 1.7em;
+    font-size: 14px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+}
+*/
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.nav li {
+    position: relative;
+    line-height: 1em;
+}
+.btn {
+    background-color: #fff;
+    border-radius: 50px;
+    width: fit-content;
+    padding: 10px 25px 10px 25px;
+    font-size: 18px;
+    margin: 15px;
+    border: solid 1px #000;
+    cursor: pointer;
+}
+.btn.black {
+    background-color: #232432;
+    color: #fff;
+    border: none;
+}
+.btn.red {
+    background-color: #e34d47;
+    color: #fff;
+    border: none;
+}
+.btn img {
+    display: inline-block;
+    vertical-align: middle;
+}
+.btn_layer {
+    min-height: 50px;
+}
+.btn_layer .btn_left {
+    float: left;
+    display: flex;
+}
+.btn_layer .btn_right {
+    float: right;
+    display: flex;
+}
+.btn_square {
+    width: 104px;
+    height: 48px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 48px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.btn_square.red {
+    background-color: #e34d47;
+}
+.btn_square.grey {
+    background-color: #c4c4c4;
+}
+.btn_mod {
+    font-size: 16px;
+    color: #000;
+    width: 30px;
+    border-bottom: 1px solid;
+    margin: auto;
+    cursor: pointer;
+}
+
+.btn_sm {
+    width: fit-content;
+    height: 38px;
+    border: solid 1px #000;
+    background-color: #fff;
+    border-radius: 3px;
+    line-height: 38px;
+    padding: 0 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.btn_sm.black {
+    color: #fff;
+    background-color: #000;
+}
+
+
+/* ====== Body ====== */
+.body_container .bodyDiv {
+    display: none;
+}
+.body_container .bodyDiv.active {
+    display: block;
+}
+.body_container .menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.body_container .menu > div {
+    width: 190px;
+    height: 60px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 18px 19px;
+    cursor: pointer;
+}
+.body_container .menu > div.active {
+    color: #e34d47;
+    border-bottom: 2px solid #e34d47;
+}
+
+/* ----- Standard Data Models ----- */
+.body_container .page_guide {
+    margin: 80px 400px 0 400px;
+    min-width: 1080px;
+}
+.body_container .page_guide span {
+    display: block;
+    padding: 10.5px 0;
+}
+.body_container .page_guide span.guide_title {
+    font-family: Ubuntu, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #e34d47;
+}
+.body_container .page_guide span.guide_content {
+    width: 868px;
+    font-size: 16px;
+    color: #666;
+}
+.body_container .page_guide .guide_body {
+    margin-top: 72px
+}
+.body_container .page_guide .guide_body .guide_step.title span{
+    font-size: 26px;
+    color: #333;
+}
+.body_container .page_guide .guide_body .guide_step1 {
+    display: flex;
+    margin: 32px 0 50px 40px;
+    text-align: center;
+}
+.body_container .page_guide .guide_body .guide_step1 .step1 {
+    width: 166px;
+    height: 222px;
+    background-color: #f2eae9;
+    margin-left: -20px;
+}
+.body_container .page_guide .guide_body .step1_arrow {
+    width: 40px;
+    height: 40px;
+    transform: rotate(45deg);
+    background-color: #f2eae9;
+    margin-left: -20px;
+    margin-top: 88px;
+    z-index: 1;
+}
+.body_container .page_guide .guide_body .guide_step1 .step2 {
+    width: 166px;
+    height: 222px;
+    background-color: #fefbfb;
+    margin-left: -20px;
+}
+.body_container .page_guide .guide_body .step2_arrow {
+    width: 40px;
+    height: 40px;
+    transform: rotate(45deg);
+    background-color: #fefbfb;
+    margin-left: -20px;
+    margin-top: 88px;
+    z-index: 1;
+}
+.body_container .page_guide .guide_body .guide_step1 span.no {
+    display: inline-block;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    border-bottom: solid 1px #e34d47;
+    width: 78px;
+    padding-bottom: 3px;
+    padding-top: 30px;
+}
+.body_container .page_guide .guide_body .guide_step1 span.title {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+.body_container .page_guide .guide_body .guide_step1 span.content {
+    font-size: 15px;
+    color: #666;
+}
+.body_container .page_guide .guide_body .guide_step2 {
+
+}
+.body_container .page_guide .guide_body .guide_step2 .step.no {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #333;
+    float: left;
+    text-align: center;
+}
+.body_container .page_guide .guide_body .guide_step2 .step.no span {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 35px;
+    padding: 0;
+}
+.body_container .page_guide .guide_body .guide_step2 .step.content {
+    font-size: 16px;
+    color: #666;
+    margin-left: 40px;
+}
+
+.body_container .page_body {
+    padding: 15px 400px 15px 400px;
+    min-width: 1080px;
+}
+.body_container .page_body.bg {
+    background-color: #fbfbfb;
+}
+.body_container .page_body span {
+    display: block;
+}
+.body_container .page_body span.body_title {
+    font-size: 26px;
+    color: #333;
+}
+.body_container .page_body span.body_subtitle {
+    font-size: 16px;
+    color: #666;
+}
+
+/* ----- Standard Data Models ----- */
+
+
+/* ====== Body ====== */
+
+
+/* ====== Table ====== */
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+}
+.table_wrap {
+    padding: 15px 0;
+}
+.table_wrap.data {
+    overflow-x: auto;
+    padding: 15px 0;
+}
+.table_type1 {
+    margin-top: 25px;
+    border-top: solid 1px #232432;
+}
+
+.table_type1 label {
+    position: relative;
+    padding: 10px 0;
+    display: inline-block;
+}
+.table_type1 tr {
+    border-bottom: solid 1px #c8c8c8;
+}
+.table_type1 th {
+    vertical-align: middle;
+    padding: 25px 0;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+.table_type1 th label {
+    font-size: 16px;
+    font-weight: 600;
+}
+.table_type1 th .block {
+    display: block;
+    font-weight: 400;
+}
+.table_type1 td {
+    text-align: left;
+    padding: 15px;
+}
+.table_type1 td .block {
+    display: block;
+}
+.table_type1 td .block strong{
+    padding-right: 10px;
+}
+.table_type1 td span.fade {
+    font-size: 14px;
+    color: #9c9c9c;
+}
+.table_type1 td .block + .text_color1 + .block {
+    margin-top: 18px;
+}
+.table_type1 td input,
+.table_type1 td textarea {
+    width: 500px;
+    height: 50px;
+    padding: 25px 12px;
+    border: 1px solid #d5d5d5;
+    font-size: 16px;
+    color: #888;
+    box-sizing: border-box;
+}
+.table_type1 td textarea {
+    width: 775px;
+    height: 138px;
+    padding: 15px 10px;
+    resize: none;
+}
+.table_type1 td input.wrong {
+    border: 2px solid #f9443d;
+}
+.table_type1 td input:focus,
+.table_type1 td textarea:focus {
+    outline-color :#2653c6 !important;
+}
+.table_type1 td textarea.wrong {
+    border: 2px solid #f9443d;
+}
+.table_type2 {
+    border-top: 2px solid #333;
+    border-bottom: 1px solid #9e9e9e;
+}
+.table_type2 th {
+    background-color: #fff;
+    font-size: 16px;
+    line-height: 1;
+    padding: 15px 5px;
+    border-bottom: 1px solid #9e9e9e;
+    color: #333;
+}
+.table_type2 tr:last-child th {
+    border-top: 1px solid #9e9e9e;
+}
+.table_type2 th.br,
+.table_type2 td.br {
+    border-right: 1px solid #9e9e9e;
+}
+.table_type2 td {
+    background-color: #f5f6fa;
+    font-size: 16px;
+    color: #333;
+    padding: 25px 5px;
+    border-bottom: 1px solid #e3e3e3;
+}
+.table_type2 td .block {
+    display: block;
+    text-align: left;
+}
+.table_type2 td.type1 {
+    color: #52b914;
+}
+.table_type2 td.type2 {
+    color: #52b914;
+}
+.table_type2 td.type3 {
+    color: #ff9600;
+}
+.table_type2 td.type4 {
+    color: #f8164b;
+}
+.table_type2.bg1 tbody tr:nth-child(2n) td {
+    background-color: #f0f4fc;
+}
+.table_type2.bg2 tbody tr:nth-child(n+3):nth-child(-n+4) td,
+.table_type2.bg2 tbody tr:nth-child(n+7):nth-child(-n+8) td,
+.table_type2.bg2 tbody tr:nth-child(n+11):nth-child(-n+12) td,
+.table_type2.bg2 tbody tr:nth-child(n+15):nth-child(-n+16) td,
+.table_type2.bg2 tbody tr:nth-child(n+19):nth-child(-n+20) td,
+.table_type2.bg2 tbody tr:nth-child(n+23):nth-child(-n+24) td,
+.table_type2.bg2 tbody tr:nth-child(n+27):nth-child(-n+28) td {
+    background-color: #f0f4fc;
+}
+.table_type2.bg2 tbody tr:nth-child(2n) td,
+.table_type2.bg2 td.bb {
+    border-bottom: 1px solid #9e9e9e;
+}
+
+.table_type3 {
+    border-top: 2px solid #333;
+    border-bottom: 1px solid #9e9e9e;
+}
+.table_type3 th {
+    background-color: #e9ecf6;
+    font-size: 16px;
+    line-height: 1;
+    padding: 15px 5px;
+    border-bottom: 1px solid #9e9e9e;
+    color: #333;
+}
+.table_type3 tr:last-child th {
+    border-top: 1px solid #9e9e9e;
+}
+.table_type3 th.br,
+.table_type3 td.br {
+    border-right: 1px solid #9e9e9e;
+}
+.table_type3 td {
+    background-color: #f5f6fa;
+    font-size: 16px;
+    color: #333;
+    padding: 25px 5px;
+    border-bottom: 1px solid #e3e3e3;
+}
+.table_type3 .even-row td {
+    background-color: #f0f4fc;
+}
+.table_type4 {
+
+}
+.table_type4 td input[type=radio] {
+    -webkit-appearance: radio !important;
+    width: auto !important;
+    height: auto !important;
+}
+/* ====== Table ====== */
+
+/* ====== Prettydown ====== */
+.prettydropdown > ul {
+    border: 1px solid #c4c4c4;
+    font-size: 18px;
+}
+.prettydropdown > ul > li {
+    width: 166px;
+    padding: 0 15px;
+}
+.prettydropdown.arrow > ul > li.selected:before,
+.prettydropdown.arrow > ul > li.selected:after,
+.prettydropdown.arrow > ul.avtive > li.selected:before,
+.prettydropdown.arrow > ul.active > li.selected::after {
+    top: 13px;
+    right: 15px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid #c4c4c4;
+}
+.prettydropdown > ul > li > span.checked {
+    display: none!important;
+}
+/* ====== Prettydown ====== */
+
+
+/* ====== File Upload ====== */
+.fileUpload .cont {
+    display: flex;
+}
+.fileUpload .upload-name {
+    width: 256px;
+    height: 50px;
+    border: solid 1px #d5d5d5;
+    border-right: 0;
+    background-color: #fff;
+    font-size: 16px;
+    color: #0b0b0b;
+    padding: 0 12px;
+}
+.fileUpload label {
+    width: 125px;
+    height: 50px;
+    line-height: 28px;
+    background-color: #c7c7c7;
+    color: #fff;
+    border: solid 1px #b3b3b3;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fileUpload input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+.fileUpload2 input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+.fileUpload2 label {
+    padding: 0;
+}
+.fileUpload2 .fileList {
+    display: flex;
+}
+.fileUpload2 .fileList span {
+    font-size: 14px;
+    color: #000;
+}
+.fileUpload2 .fileList img {
+    width: 14px;
+    height: 14px;
+    margin: 5px 10px 0 10px;
+}
+.fileUpload2 .removeFile {
+    cursor: pointer;
+}
+/* ====== File Upload ====== */
